@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Lite</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="/javascripts/jquery.js"></script>
+</head>
+<body>
+ <section id="top">
+   <div id="logo"><div id="mid"><div id="center"></div></div></div>
+
+  <div id="words"><h1 id="name">Square Lite</h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+  <h1 id="user_type">Admin: {{name}} {{last_name}}</h1>
+
+  <ul id="nav">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+
+ </section>
+
+ <hr>
+
+<section id="middle">
+<form id="administrator" action="/signup" method="post">
+<h5 class="slogan">Register a new user</h5>
+<label>First Name </label><br>
+   <input class="registration" type="text" placeholder="First Name" name="name" required="Please fill out this field">
+<br>
+    <label>Last Name</label><br>
+    <input class="registration" type="text" placeholder="Last Name" name="last_name" required="Please fill out this field">
+<br>
+   <label>User Email</label><br>
+<input class="registration" type="text" placeholder="Email" name="email" required="Please fill out this field">
+<br>
+<label>Temporary Password</label><br>
+<input class="registration" type="password" placeholder="Password" name="password" required="Please fill out this field">
+<br>
+<button id='add_user' type="submit">Add user</button>
+</form>
+
+<div class="dos">
+<a href="/administrator">Users</a>
+</div>
+
+<div class="tres"></div>
+
+ </section>
+ <div class="push"></div>
+  </div>
+<hr>
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+</html>

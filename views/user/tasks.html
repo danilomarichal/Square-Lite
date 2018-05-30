@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Lite</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+
+</head>
+<body>
+ <section id="top">
+   <div id="logo"><div id="mid"><div id="center"></div></div></div>
+
+   <div id="words"><h1 id="name">Square Lite</h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+
+  <form id="search_bar">
+      <input id="my_search" type="text" placeholder="Project Name" name="search">
+      <button id="look" class="searching" type="submit"></button>
+  </form>
+  <div class="welcoming">
+    <a href="/out" id="out" type="submit">Logout</a>
+    <p id="hi"> Hello, {{name}} {{last_name}}</p>
+    <p id="time"></p>
+ </div>
+ </section>
+<hr>
+<section id="sliding">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id="calendar">
+<div class="month">
+  <ul>
+    <li class="prev"><a href="#">&#10094;</a></li>
+    <li class="next"><a href="#">&#10095;</a></li>
+    <li id="month"></li>
+    <li id="months"></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+</div>
+
+</section>
+<section id="body">
+<!--<button id="burger" onclick="openNav()"></button>-->
+<ul id="my_ul">
+    <li class="my_li"><a href="/tasks">Tasks</a></li>
+    <li class="my_li"><a href="#">Progress</a></li>
+    <li class="my_li"><a href="/sched">Calendar</a></li>
+    <li class="my_li"><a href="#">Files</a></li>
+  </ul>
+
+<div id="add">
+
+  <ul id="edit">
+    <li id="plus"><button id="adding">Add &#x2b;</button></li>
+    <li class="action" id="sort">Delete</li>
+    <li class="action" id="change">Edit</li>
+    <li class="action" id="take_away">Sort</li>
+  </ul>
+
+<table id="user_tasks">
+  <tr>
+    <th style="display: none;" >Project</th>
+    <th style="display: none;" >Client</th>
+    <th style="display: none;" >Date/Time created</th>
+    <th style="display: none;" >Description</th>
+    <th style="display: none;" >Deadline</th>
+    <th style="display: none;">Progress</th>
+    <th style="display: none;">Time-Frame</th>
+    <th style="display: none;">Edit</th>
+    <th style="display: none;">Delete</th>
+  </tr>
+{{#todo}}
+  <tr>
+    <td class="column">{{project}}</td>
+    <td class="column">{{client}}</td>
+    <td class="column">{{dead_line}}</td>
+    <td class="column">{{description}}</td>
+    <td id="progress"></td>
+    <td id="frame"></td>
+    <form id="delete" action = "/delete_task?_method=DELETE" method="POST">
+    <td class="column"><button type="submit" class="editing">Edit</button></td>
+  </form>
+    <td class="column"><button type="submit" class="editing">Delete</button></td>
+  </tr>
+{{/todo}}
+</table>
+
+</div>
+
+
+  <div id="task" style="display: none;">
+ <p class="usable">Create a new project</p>
+ <form id="add_task" action="/tasks" method="POST">
+    <input class="task_asw" placeholder="WRITE A TASK NAME" name="project"><br><br>
+    <input class="task_asw" placeholder="CLIENT'S NAME" name="client"><br><br>
+  <textarea class="task_text" rows="4" cols="50" placeholder="DESCRIPTION..." name="description"></textarea><br><br>
+
+   <label class="task_qz">Deadline</label>
+<select class="task_select" name="month">
+   <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+   <option value="April">April</option>
+   <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+   <option value="August">August</option>
+   <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+   <option value="December">December</option>
+</select>
+<select class="task_select" name="day">
+  <option value="1">01</option>
+  <option value="2">02</option>
+  <option value="3">03</option>
+  <option value="4">04</option>
+  <option value="5">05</option>
+  <option value="6">06</option>
+  <option value="7">07</option>
+  <option value="8">08</option>
+  <option value="9">09</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>
+<select class="task_select" name="time">
+  <option value="8:00">8:00AM</option>
+  <option value="8:30">8:30AM</option>
+  <option value="9:00">9:00AM</option>
+  <option value="9:30">9:30AM</option>
+  <option value="10:00">10:00AM</option>
+  <option value="10:30">10:30AM</option>
+  <option value="11:00">11:00AM</option>
+  <option value="11:30">11:30AM</option>
+  <option value="12:00">12:00PM</option>
+  <option value="12:30">12:30PM</option>
+  <option value="1:00">1:00PM</option>
+  <option value="1:30">1:30PM</option>
+  <option value="2:00">2:00PM</option>
+  <option value="2:30">2:30PM</option>
+  <option value="3:00">3:00PM</option>
+  <option value="3:30">3:30PM</option>
+  <option value="4:00">4:00PM</option>
+  <option value="4:30">4:30PM</option>
+  <option value="5:00">5:00PM</option>
+  <option value="5:30">5:30PM</option>
+  <option value="6:00">6:00PM</option>
+</select><br><br><br>
+<span class="current">{{name}} created this task on:</span><br><br><span id="actual_date_time" class="current" name="current"></span>
+<br><br>
+<button type="submit" id="send_task">Create Task</button>
+</form>
+<button id="cancel_task">Cancel</button>
+</div>
+</section>
+
+<hr>
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+<script src="../../javascripts/script.js"></script>
+</html>

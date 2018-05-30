@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Lite</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+<script src="codebase/dhtmlxscheduler.js" ></script>
+    <link rel="stylesheet" href="codebase/dhtmlxscheduler.css">
+</head>
+<body>
+ <section id="top">
+   <a href="/login"><div id="logo"><div id="mid"><div id="center"></div></div></div></a>
+
+   <div id="words"><h1 id="name"><a href="/login" style="color: black;">Square Lite</a></h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+
+  <form id="search_bar">
+      <input id="my_search" type="text" placeholder="Project Name" name="search">
+      <button id="look" class="searching" type="submit"></button>
+  </form>
+  <div class="welcoming">
+    <a href="/out" id="out" type="submit">Logout</a>
+    <p id="hi"> Hello, {{name}} {{last_name}}</p>
+    <p id="time"></p>
+ </div>
+ </section>
+<hr>
+<ul id="my_ul">
+    <li class="my_li"><a href="/tasks">Tasks</a></li>
+    <li class="my_li"><a href="#">Progress</a></li>
+    <li class="my_li"><a href="/sched">Calendar</a></li>
+    <li class="my_li"><a href="#">Files</a></li>
+  </ul>
+  <section>
+    <div id="weather">
+     <h3 id="city"></h3>
+     <h5 id="weather_info"></h5>
+     <div id="weather_icon"></div>
+    </div>
+
+  </section>
+<!--
+<section id="my_calendar" onload="init();">
+    <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+        <div class="dhx_cal_navline">
+            <div class="dhx_cal_prev_button">&nbsp;</div>
+            <div class="dhx_cal_next_button">&nbsp;</div>
+            <div class="dhx_cal_today_button"></div>
+            <div class="dhx_cal_date"></div>
+            <div class="dhx_cal_tab" name="day_tab"></div>
+            <div class="dhx_cal_tab" name="week_tab"></div>
+            <div class="dhx_cal_tab" name="month_tab"></div>
+        </div>
+
+        <div class="dhx_cal_header">
+        </div>
+        <div class="dhx_cal_data">
+        </div>
+    </div>
+</section>
+<section>
+  <div id="calendar2">
+<div class="month">
+  <ul>
+    <li class="prev"><a href="#">&#10094;</a></li>
+    <li class="next"><a href="#">&#10095;</a></li>
+    <li id="month"></li>
+    <li id="months"></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+</div>
+</section>-->
+<hr>
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+<script src="../../javascripts/script.js"></script>
+</html>

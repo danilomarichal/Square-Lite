@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Lite</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="/javascripts/jquery.js"></script>
+</head>
+<body>
+ <section id="top">
+   <div id="logo"><div id="mid"><div id="center"></div></div></div>
+
+   <div id="words"><h1 id="name">Square Lite</h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+  <h1 id="user_type">Administrator</h1>
+
+  <ul id="nav">
+    <li><a href="/home">Home</a></li>
+    <li><a href="logout">Logout</a></li>
+  </ul>
+
+ </section>
+<hr>
+ <section id="middle">
+
+<table id="teams">
+  <tr>
+    <th class="info_users">Id</th>
+    <th class="info_users">Name</th>
+    <th class="info_users">Last Name</th>
+    <th class="info_users">More</th>
+  </tr>
+  {{#users}}
+  <tr id="first_table">
+    <td class="info_users">{{id}}</td>
+    <td class="info_users">{{name}}</td>
+    <td class="info_users">{{last_name}}</td>
+    <td class="info_users"><a href="/administrator/{{id}}">Details</a></td>
+  </tr>
+{{/users}}
+</table>
+
+</section>
+
+ <hr>
+ <div class="push"></div>
+  </div>
+
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+</html>

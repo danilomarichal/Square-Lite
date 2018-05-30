@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square Lite</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="/javascripts/jquery.js"></script>
+</head>
+<body>
+ <section id="top">
+   <div id="logo"><div id="mid"><div id="center"></div></div></div>
+
+   <div id="words"><h1 id="name">Square Lite</h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+  <h1 id="user_type">Administrator</h1>
+
+  <ul id="nav">
+    <li><a href="/home">Home</a></li>
+    <li><a href="logout">Logout</a></li>
+  </ul>
+
+ </section>
+<hr>
+ <section id="middle">
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <th>{{id}}</th>
+    <td>{{name}}</td>
+    <td>{{last}}</td>
+    <td>{{email}}</td>
+  </tr>
+</table>
+
+<form id="delete" action = "/delete?_method=DELETE" method="POST">
+<h5 class="slogan">Remove user</h5>
+<input style="display: none;" name="remove" value="{{email}}">
+    <button id="leave" type="submit">Delete credentials</button>
+</form>
+
+<div id="update">
+<h5 class="slogan">Update user</h5>
+    <button id="upd" type="submit">Update credentials</button>
+</div>
+
+<form id="update_form" style="display: none;" action="/update" method="POST">
+<h5 class="slogan">Edit Information</h5>
+<input style="display: none;" value="{{id}}" name="num_id" >
+   <label>User Email</label><br>
+<input class="registration" type="text" placeholder="Email" name="email" required="Please fill out this field">
+<br>
+<label>Password</label><br>
+<input class="registration" type="password" placeholder="Password" name="password" required="Please fill out this field">
+<br>
+<button id='update_user' type="submit">Update</button>
+</form>
+</section>
+ <hr>
+ <div class="push"></div>
+  </div>
+
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+<script src="/javascripts/script.js"></script>
+</html>

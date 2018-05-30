@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+    <meta content="text/html; charset=utf-8">
+    <script src="/codebase/dhtmlxscheduler.js" ></script>
+    <link rel="stylesheet" href="/codebase/dhtmlxscheduler.css">
+    <link rel="stylesheet" href="../stylesheets/style.css"/>
+    <script src="../javascripts/jquery.js"></script>
+</head>
+<body>
+     <section id="top">
+   <a href="/login"><div id="logo"><div id="mid"><div id="center"></div></div></div></a>
+
+   <div id="words"><h1 id="name"><a href="/login">Square Lite</a></h1>
+   <h5 id="slogan">Make the work happen</h5></div>
+
+  <form id="search_bar">
+      <input id="my_search" type="text" placeholder="Project Name" name="search">
+      <button id="look" class="searching" type="submit"></button>
+  </form>
+  <div class="welcoming">
+    <a href="/out" id="out" type="submit">Logout</a>
+    <p id="hi"> Hello, {{name}} {{last_name}}</p>
+    <p id="time"></p>
+ </div>
+ </section>
+<hr>
+
+<ul id="my_ul">
+    <li class="my_li"><a href="/tasks">Tasks</a></li>
+    <li class="my_li"><a href="#">Progress</a></li>
+    <li class="my_li"><a href="/sched">Calendar</a></li>
+    <li class="my_li"><a href="#">Files</a></li>
+  </ul>
+
+
+<section id="my_day">
+<p class="usable" style="margin-left:100px;">Todays Tasks</p>
+</section>
+<section id="my_calend" onload="init();">
+
+
+    <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+        <div class="dhx_cal_navline">
+          <div class="dhx_cal_today_button"></div>
+            <div class="dhx_cal_prev_button">&nbsp;</div>
+            <div class="dhx_cal_next_button">&nbsp;</div>
+            <div class="dhx_cal_date"></div>
+            <!--<div class="dhx_cal_tab" name="day_tab"></div>
+            <div class="dhx_cal_tab" name="week_tab"></div>
+            <div class="dhx_cal_tab" name="month_tab"></div>-->
+        </div>
+        <div class="dhx_cal_header">
+        </div>
+        <div class="dhx_cal_data">
+        </div>
+    </div>
+
+
+</section>
+
+
+<hr>
+<footer style="font-size: 12px; text-align: center;">
+<p id="rights">Trademarks | Terms of Use | Privacy | Cookie Policy | Brand
+<br>
+© 2018. All Rights Reserved - Square-Lite
+<br>
+Square-Lite is a trademark of Square Lite SL, registered in the U.S. and in other countries.</p>
+</footer>
+</body>
+<script src="../javascripts/script.js"></script>
+</html>
